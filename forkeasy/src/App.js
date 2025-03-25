@@ -11,6 +11,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Activity from './Activity';
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
      <Route path='/home' element={<Home/>} />
      <Route path='/groups' element={<Groups/>} />
       <Route path='/friends' element={<Friends/>} />
+      <Route path='/activity' element={<Activity/>} />
         </Routes>
         </Router>
     </>

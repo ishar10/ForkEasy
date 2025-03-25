@@ -14,8 +14,8 @@ const Navigation = () => {
     <a className="nav-item nav-link active" href="/home">Home <span className="sr-only">(current)</span></a>
       <a className="nav-item nav-link active" href="/groups">Groups <span className="sr-only">(current)</span></a>
       <a className="nav-item nav-link active" href="/friends">Friends <span className="sr-only">(current)</span></a>
-      <a className="nav-item nav-link active" href="#">Activity <span className="sr-only">(current)</span></a>
-      <a className="nav-item nav-link active" href="#">About <span className="sr-only">(current)</span></a>
+      <a className="nav-item nav-link active" href="/activity">Activity <span className="sr-only">(current)</span></a>
+   
 
     </div>
     
