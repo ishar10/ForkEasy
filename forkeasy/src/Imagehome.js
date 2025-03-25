@@ -1,9 +1,9 @@
 import React from 'react'
-import pic from './Coinsplit.png'
-const Imagehome = () => {
+
+const Imagehome = (props) => {
   return (
     
-      <img  src={pic} className="img-fluid"></img>
+      <img  src={props.name} width = {props.width} className="img-fluid"></img>
    
   )
 }

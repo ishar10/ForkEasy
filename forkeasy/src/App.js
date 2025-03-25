@@ -8,8 +8,7 @@ import Groups from './Groups';
 import {
   BrowserRouter as Router ,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Activity from './Activity';
 function App() {
