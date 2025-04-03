@@ -2,7 +2,14 @@ import React from 'react'
 import Navigation from './Navigation'
 import List from './List'
 const Activity = () => {
-  return (
+  const token = sessionStorage.getItem("token")
+  return (<>
+    {(token == "" || token== undefined) ?
+    <div>
+      <Navigation></Navigation>
+      <h1>Login to view your expense history</h1>
+      
+    </div>:
     <div>
           <Navigation></Navigation>
           <ul className="list-group">
@@ -11,6 +18,8 @@ const Activity = () => {
             <List name='Vanshika created group Pottery'></List>
             </ul>
     </div>
+}</>
+
   )
 }
 

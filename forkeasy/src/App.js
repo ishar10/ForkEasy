@@ -4,13 +4,14 @@ import Home from './Home';
 import Flask from './Flask';
 import Friends from './Friends';
 import Groups from './Groups';
-
 import {
   BrowserRouter as Router ,
   Routes,
   Route
 } from "react-router-dom";
 import Activity from './Activity';
+import Login from './Login';
+import Signup from './Signup';
 function App() {
   return (
     <>
@@ -21,6 +22,8 @@ function App() {
      <Route path='/groups' element={<Groups/>} />
       <Route path='/friends' element={<Friends/>} />
       <Route path='/activity' element={<Activity/>} />
+      <Route path='/login' element={<Login/>} />
+      <Route path='/signup' element={<Signup/>} />
         </Routes>
         </Router>
     </>

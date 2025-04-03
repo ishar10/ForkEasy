@@ -2,7 +2,25 @@
 import React from 'react'
 import pic from './logo.png'
 import Imagehome from './Imagehome'
+import { useNavigate } from "react-router-dom";
+
 const Navigation = () => {
+  let navigate = useNavigate(); 
+  const logout =()=>{
+    sessionStorage.removeItem("token")
+    console.log("Logged out");
+    let path = `/home`; 
+    navigate(path);
+
+  }
+  const login =()=>{
+    let path = `/login`; 
+    navigate(path);
+  }
+  const signup = () =>{
+    let path = `/signup`; 
+    navigate(path);
+  }
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light ">
@@ -21,14 +39,20 @@ const Navigation = () => {
     </div>
     
   </div>
-  <ul className="nav navbar-nav ml-auto">
-      <li className="nav-item">
-        <a className="nav-link" href="#"><span className="fas fa-user"></span> Sign Up</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#"><span className="fas fa-sign-in-alt"></span> Login</a>
-      </li>
-    </ul>
+  <div>
+ 
+  <button type="button" className="btn mr-3" onClick={signup}>Sign up</button>
+   
+      
+      {(sessionStorage.getItem("token") && sessionStorage.getItem("token") != "" && sessionStorage.getItem("token")!= undefined) ?
+        <button type="button" className="btn" onClick={logout}>Logout</button>:
+        <button type="button" className="btn" onClick={login}>Login</button>
+      
+}
+    
+  </div>
+ 
+
 </nav>
 
   

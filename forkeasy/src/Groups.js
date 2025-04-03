@@ -3,9 +3,16 @@ import Card from './Card'
 
 import Navigation from './Navigation'
 const Groups = () => {
-  return (
+  const token = sessionStorage.getItem("token")
+  return (<>
+    {(token == "" || token== undefined) ?
     <div>
-        <Navigation></Navigation>
+      <Navigation></Navigation>
+      <h1>Login to view expenses shared between your Groups</h1>
+      
+    </div>:
+    <div>
+      <Navigation></Navigation>
     <div className='d-flex justify-content-around flex-wrap'>
       <Card  title = "Badminton" subtitle = "Game" text= "Badminton group between various friends to split the expense"></Card>
       <Card title = "Pottery" subtitle = "activity" text= "Pottery group between various friends to split the expense"></Card>
@@ -15,6 +22,11 @@ const Groups = () => {
       <Card title = "Club" subtitle = "Dance" text= "Club group between various friends to split the expense"></Card>
       </div>
     </div>
+    
+    
+}
+    </>
+
   )
 }
 
