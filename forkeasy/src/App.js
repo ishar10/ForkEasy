@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import Home from './Home';
-import Flask from './Flask';
 import Friends from './Friends';
 import Groups from './Groups';
 import {
