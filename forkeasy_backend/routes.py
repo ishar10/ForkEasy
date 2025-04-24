@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 @app.route('/groups_and_friends')
 @jwt_required()
 def groups_and_friends():

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Imagehome = (props) => {
-  return (
-    
-      <img  src={props.name} width = {props.width} className="img-fluid"></img>
-   
-  )
-}
+  return <img src={props.name} width={props.width} className="img-fluid" alt=""></img>;
+};
 
-export default Imagehome
+export default Imagehome;
